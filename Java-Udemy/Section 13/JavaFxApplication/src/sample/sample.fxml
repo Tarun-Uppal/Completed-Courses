@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+
+<GridPane fx:id="gridPane" alignment="center" hgap="10" stylesheets="@styles.css" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
+    <Button onAction="#handleClick" style="-fx-background-color: green; -fx-text-fill: white;" text="Open..." GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <Button style="-fx-background-color: green; -fx-text-fill: white;" text="Button2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Button fx:id="button3" text="Button3" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+    <Button fx:id="button4" text="Button4" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+    <Button text="Button5" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+
+    <RadioButton text="Radio Button" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Label fx:id="label" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" rotate="90" text="JavaFXEffects" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+   <Hyperlink onAction="#handleLinkClick" text="youtube" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+    <WebView fx:id="webView" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="4" GridPane.rowSpan="3" />
+   <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="4" />
+   <Button mnemonicParsing="false" text="Button5" GridPane.columnIndex="4" />
+   <Button mnemonicParsing="false" text="Button5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Button>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+
+</GridPane>

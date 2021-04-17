@@ -1,0 +1,77 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:id="mainPanel" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox>
+            <ToolBar>
+                <HBox>
+                    <Button text="Add" onAction="#showAddContactDialog">
+                        <tooltip>
+                            <Tooltip text="Remove the selected Contact"/>
+                        </tooltip>
+                    </Button>
+                    <Button text="Remove" onAction="#deleteItem">
+                        <tooltip>
+                            <Tooltip text="Remove the selected Contact"/>
+                        </tooltip>
+                    </Button>
+                    <Button text="Rename Contact" onAction="#renameContact">
+                        <tooltip>
+                            <Tooltip text="rename the current contact"/>
+                        </tooltip>
+                    </Button>
+                    <Button text="Change Number" onAction="#editContactNumber">
+                        <tooltip>
+                            <Tooltip text="Edit the current contact number"/>
+                        </tooltip>
+                    </Button>
+                    <Button text="Change Note" onAction="#editNote">
+                        <tooltip>
+                            <Tooltip text="Edit the current contact note"/>
+                        </tooltip>
+                    </Button>
+                    <Button text="Exit" onAction="#exit">
+                        <tooltip>
+                            <Tooltip text="Exit the application"/>
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+
+
+    <center>
+        <TableView fx:id="contacts">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Phone Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Note">
+                    <cellValueFactory>
+                    <PropertyValueFactory property="notes"/>
+                </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

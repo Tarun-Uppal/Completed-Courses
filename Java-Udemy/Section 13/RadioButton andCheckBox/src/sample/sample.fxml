@@ -1,0 +1,34 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="This is a label this is a label"
+           textFill="blue" wrapText="true">
+        <font>
+            <Font name = "Arial italic" size="40"/>
+        </font>
+    </Label>
+
+    <fx:define>
+        <ToggleGroup fx:id="colourToggleGroup"/>
+    </fx:define>
+<VBox GridPane.rowIndex="0" GridPane.columnIndex="2">
+    <RadioButton GridPane.rowIndex="0" text="Red" toggleGroup="$colourToggleGroup"/>
+    <RadioButton GridPane.rowIndex="0" text="Blue" toggleGroup="$colourToggleGroup" selected="true"/>
+    <RadioButton GridPane.rowIndex="0" text="Green" toggleGroup="$colourToggleGroup"/>
+</VBox>
+
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3">
+        <CheckBox text="Dog" />
+        <CheckBox text="Cat" />
+        <CheckBox text="Bird"/>
+    </VBox>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="4" >
+        <ToggleButton text="Toggle Me1"/>
+        <ToggleButton text="Toggle Me2"/>
+        <ToggleButton text="Toggle Me3"/>
+    </HBox>
+</GridPane>

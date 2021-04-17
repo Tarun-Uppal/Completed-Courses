@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.RenameContactDialogController">
+    <headerText>
+        Edit the selected contact
+        type use previous if you want to use the previous contact data
+        press cancel if you want to exit
+        if you want to use the previous contact name or last name leave the field empty
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="First name" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="firstName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Last name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="lastName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        </GridPane>
+    </content>
+</DialogPane>

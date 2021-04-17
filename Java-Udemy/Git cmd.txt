@@ -1,0 +1,8 @@
+first -->         git add -A
+second -->        git commit -m "YOUR MESSAGE HERE"
+third -->         git push
+
+example
+git add -A
+git commit -m "This is my first commit"
+git push
